@@ -4,10 +4,35 @@
   box-sizing: border-box;
 }
 
+:root {
+  --icon-width: 79px;
+  --icon-height: 79px;
+  --num-icons: 9;
+}
+
 body {
   width: 100vw;
   height: 100vh;
+  background-color: lightblue;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container {
+  width: calc(4 * var(--icon-width));
+  height: calc(3.5 * var(--icon-height));
+  border: 1px solid black;
+  padding: calc(0.25 * var(--icon-height));
+  display: flex;
+  justify-content: space-between;
+}
+
+.reel {
+  width: var(--icon-width);
+  /* height: calc(3 * var(--icon-height)); */
+  border: 1px solid black;
+  background-image: url('/slotreel.webp');
+  background-repeat: repeat-y;
+  background-position: 0 0;
 }
